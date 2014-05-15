@@ -1,7 +1,19 @@
 <p>This is the partial for view 2.</p>
 <p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
+    <p>Direct calls of ngResource methods</p>
+    <pre>
+        var a = new Article({content: $scope.article});
+
+        if ($scope.edit) {
+            a.$update(function(data, status) {
+                console.log('UPDATE COMPLETED', data, status);
+            });
+        } else {
+            a.$save(function(data, status) {
+                console.log('SAVE COMPLETED', data, status);
+            });
+        }
+    </pre>
 
   <br />
     <textarea ng-model="article"></textarea><br />
