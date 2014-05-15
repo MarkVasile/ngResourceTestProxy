@@ -1,0 +1,10 @@
+<p>This is the partial for view 2.</p>
+<p>
+  Showing of 'interpolate' filter:
+  {{ 'Current version is v%VERSION%.' | interpolate }}
+
+  <br />
+    <textarea ng-model="article"></textarea><br />
+    <input type="checkbox" ng-model="edit" id="edit" /><label for="edit">Edit</label>
+    <button ng-click="postArticle()">Save</button>
+</p>
