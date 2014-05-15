@@ -14,6 +14,7 @@ directly call the ngResource method on a case-by-case method.
 ```
 var action = Article.$save;
 [... some decision making code ...]
+action(funcion(server_response, status) {...});
 ```
 
 vs.
